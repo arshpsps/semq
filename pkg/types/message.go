@@ -12,7 +12,7 @@ func NewMessage(offset int64, payload []byte) Message {
 	return Message{
 		Offset: offset,
 		Payload: payload,
-		Timestamp: time.Now().Unix(),
+		Timestamp: time.Now().UnixNano(),
 	}
 }
 
