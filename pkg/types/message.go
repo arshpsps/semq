@@ -3,15 +3,15 @@ package types
 import "time"
 
 type Message struct {
-	Offset int64
-	Payload []byte
+	Offset    int64
+	Payload   []byte
 	Timestamp int64
 }
 
 func NewMessage(offset int64, payload []byte) Message {
 	return Message{
-		Offset: offset,
-		Payload: payload,
+		Offset:    offset,
+		Payload:   payload,
 		Timestamp: time.Now().UnixNano(),
 	}
 }
